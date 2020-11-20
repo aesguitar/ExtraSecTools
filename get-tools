@@ -15,7 +15,8 @@ git clone https://github.com/carlospolop/privilege-escalation-awesome-scripts-su
 mkdir SecLists
 echo "Adding Seclists & rockyou"
 git clone https://github.com/danielmiessler/SecLists
-wget "https://github.com/praetorian-inc/Hob0Rules/raw/master/wordlists/rockyou.txt.gz" | gzip -d
+wget "https://github.com/praetorian-inc/Hob0Rules/raw/master/wordlists/rockyou.txt.gz" 
+gzip -d rockyou.txt
 mv rockyou.txt /Seclists/Passwords/rockyou.txt
 rm rockyou.txt.gz
 
