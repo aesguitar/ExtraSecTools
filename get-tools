@@ -1,0 +1,22 @@
+#!/bin/bash
+
+cd /opt
+
+mkdir ExtraTools
+
+cd ExtraTools
+
+echo "Adding Impacket"
+git clone https://github.com/SecureAuthCorp/impacket
+
+echo "Adding LinPEAS"
+git clone https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite
+
+mkdir SecLists
+echo "Adding Seclists & rockyou"
+git clone https://github.com/danielmiessler/SecLists
+wget "https://github.com/praetorian-inc/Hob0Rules/raw/master/wordlists/rockyou.txt.gz" | gzip -d
+mv rockyou.txt /Seclists/Passwords/rockyou.txt
+rm rockyou.txt.gz
+
+echo "Done."
